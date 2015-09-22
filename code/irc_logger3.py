@@ -8,11 +8,7 @@ if len(sys.argv) != 3:
     exit(0)
 channel = sys.argv[1]
 log_name = sys.argv[2]
-#optional: prompt for channelnel if not given, or check for custom config file?
 
-#create global vars
-
-#dt = timedelta(seconds = 1)
 t_period = timedelta(minutes = 1)
 
 def parse_line(line):
@@ -36,8 +32,6 @@ def check_stream_status():
     data = json.loads(html.read())
     return (data["stream"] != None)
 	
-#def check_for_exit()
-    
 #read logon creds
 f = open("creds.txt", 'r')
 nick = f.readline().strip()
